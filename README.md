@@ -1,2 +1,1 @@
-# CloakZone
-CloakZone - games :D
+CloakZone - da best proxy :D
