@@ -1,0 +1,55 @@
+/* Notification Over-ride CSS */
+#notificationContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 250px;
+  max-width: 320px;
+  padding: 14px 18px;
+  background-color: rgba(53, 0, 74, 0.25);
+  border: 1px solid rgba(153, 0, 255, 0.25);
+  backdrop-filter: blur(1.5rem);
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 0 0 8px black;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: 0.01s ease-in-out, 0.1 ease-in-out;
+  position: relative;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.notification .closeBtn {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.notification .closeBtn:hover {
+  color: white;
+}
+
+.notification:hover {
+  border-color: rgba(153, 0, 255, 0.45);
+  transform: translateX(0) scale(1.02);
+}
